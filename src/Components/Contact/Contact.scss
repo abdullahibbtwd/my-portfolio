@@ -1,0 +1,119 @@
+:root{
+    --primary-color:#FFCC66;
+    --secondary-color:#336699;
+    --background-color:aliceblue;
+    --another-color:#003366;
+}
+
+.contact{
+    max-width: 1000px;
+    margin: auto;
+    height: 100vh; 
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    .textContainer{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        h1{
+            font-size: 60px;
+            color: var(--another-color);
+            line-height: 60px;
+        }
+        .item{
+            gap: 5px;
+            h2{
+                font-weight: 500;
+                font-size: 28px;
+                color:var(--primary-color) ;
+            }
+           span{
+            font-weight: 200;
+            font-size: 14px;
+            color: var(--secondary-color);
+            letter-spacing: 1px;
+        } 
+        }
+        
+    }
+    .formContainer{
+        position: relative;
+        
+        flex: 1;
+        .phone{
+            position: absolute;
+            margin: auto;
+            z-index: -1;
+          
+        }
+       form{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        input{
+            height: 35px;
+            background: transparent;
+            border: 0.5px solid gray;
+            padding: 14px;
+            letter-spacing: 1px;
+            color: black;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+
+        }
+        textarea{
+            background: transparent;
+            border: 0.5px solid gray;
+            padding: 14px;
+            color: black;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+        }
+        button{
+            padding: 7px;
+            background-color: var(--primary-color);
+            color: black;
+            border: none;
+            border-radius: 7px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+       }
+    }
+}
+@media (max-width:479px){
+    .contact{
+      display: flex;
+      flex-direction: column;
+        .textContainer{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 20px;
+            
+             justify-content: center;
+            h1{
+                font-size: 29px;
+                margin-top: 5px;
+                
+            }
+            h2{
+                font-size: 17px;
+            }
+        }
+        .formContainer{
+            width: 80%;
+        }
+    }
+}

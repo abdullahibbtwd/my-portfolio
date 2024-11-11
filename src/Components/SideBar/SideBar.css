@@ -1,0 +1,69 @@
+.sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: white;
+  color: black;
+}
+
+.sidebar .bg {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  z-index: 999;
+  bottom: 0;
+  width: 300px;
+  background: white;
+}
+
+.sidebar .bg .links {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+.sidebar .bg .links a {
+  font-size: 25px;
+}
+
+.sidebar button {
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  top: 25px;
+  position: fixed;
+  background: transparent;
+  border: none;
+  left: 25px;
+  cursor: pointer;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+/*# sourceMappingURL=SideBar.css.map */

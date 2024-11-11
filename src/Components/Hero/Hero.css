@@ -1,0 +1,87 @@
+.hero {
+  height: calc(100vh - 100px);
+  overflow: hidden;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0c0c1d), to(#111132));
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  position: relative;
+}
+
+.hero .wrapper {
+  max-width: 1000px;
+  height: 100%;
+  margin: auto;
+}
+
+.hero .wrapper .textContainer {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 15px;
+}
+
+.hero .wrapper .textContainer h2 {
+  font-size: 24px;
+  color: rebeccapurple;
+  letter-spacing: 5px;
+}
+
+.hero .wrapper .textContainer h1 {
+  font-size: 50px;
+}
+
+.hero .wrapper .textContainer .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+
+.hero .wrapper .textContainer .buttons button {
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background: transparent;
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+}
+
+.hero .wrapper .textContainer .buttons .Contact {
+  background: white;
+  color: #111132;
+}
+
+.hero .imageContainer {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  margin-right: 120px;
+}
+
+.hero .slidingText {
+  font-size: 50vh;
+  position: absolute;
+  bottom: -60px;
+  white-space: nowrap;
+  color: #ffffff09;
+  width: 50%;
+  font-weight: bold;
+}
+/*# sourceMappingURL=Hero.css.map */
