@@ -125,7 +125,7 @@ const Single = ({ item }) => {
             style={{ y: y }}
           >
             <h2>{item.title}</h2>
-            <p>{item.description}</p>
+            <p className="class">{item.description}</p>
             <p>{item.description2}</p>
             <p>{item.description3}</p>
             <a href={item.link}>

@@ -22,7 +22,7 @@ const App = () => {
       <section id="Services">
         <Services />
       </section>
-      <Projects />
+      <Projects id="projects"/>
       
       <section id="Skills" className="skill-section">
         <Skill />
