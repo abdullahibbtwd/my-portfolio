@@ -1,9 +1,11 @@
-import { useRef} from "react";
+import { useRef } from "react";
 import "./Contact.scss";
 import { motion } from "framer-motion";
-import { BiMailSend,BiPhoneCall } from "react-icons/bi";
+import { BiMailSend, BiPhoneCall } from "react-icons/bi";
 import { FaLocationPin } from "react-icons/fa6";
 import { CiLocationArrow1 } from "react-icons/ci";
+import Email from "@emailjs/browser";
+
 const variants = {
   initial: {
     y: 500,
@@ -20,14 +22,27 @@ const variants = {
 };
 
 const Contact = () => {
-  const ref = useRef()
+  const ref = useRef();
+  const Form = useRef();
 
-  
- 
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    Email.sendForm("service_rgu82zv", "template_gfbeq0x", Form.current, {
+      publicKey: "rsmQTxk9KMvN1yr1Q",
+    }).then(
+      () => {
+        console.log("SUCCESS!");
+      },
+      (error) => {
+        console.log("FAILED...", error.text);
+      }
+    );
+  };
 
   return (
     <motion.div
-    ref={ref}
+      ref={ref}
       className="contact"
       variants={variants}
       initial="initial"
@@ -36,12 +51,15 @@ const Contact = () => {
       <motion.div className="textContainer" variants={variants}>
         <motion.h1 variants={variants}>Let's Work Together</motion.h1>
         <motion.div className="item" variants={variants}>
-          <h2><BiMailSend/></h2>
+          <h2>
+            <BiMailSend />
+          </h2>
           <span>abdullahibbtwd@gmail.com</span>
         </motion.div>
-        <motion.div className="item" 
-        variants={variants}>
-          <h2><CiLocationArrow1/></h2>
+        <motion.div className="item" variants={variants}>
+          <h2>
+            <CiLocationArrow1 />
+          </h2>
           <span>
             No.22 Tsigi Street,Tudun Wada LGA,
             <br />
@@ -49,7 +67,9 @@ const Contact = () => {
           </span>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <h2><BiPhoneCall/></h2>
+          <h2>
+            <BiPhoneCall />
+          </h2>
           <span>+2348160192779</span>
         </motion.div>
       </motion.div>
@@ -73,31 +93,37 @@ const Contact = () => {
           </svg>
         </motion.div>
         <motion.form
+          ref={Form}
+          onSubmit={sendEmail}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 4, duration: 1 }}
         >
-          <input type="text" 
-          required 
-          placeholder="Name" 
-          onChange={(e)=> setName(e.target.value)}
+          <input
+            type="text"
+            required
+            placeholder="Name"
+            name="from_name"
+           
           />
 
-          <input type="email"
-           required 
-           onChange={(e)=> setEmail(e.target.value)}
-           placeholder="Email" 
-            />
-
-          <textarea 
-          cols="30"
-          rows="10" 
-          placeholder="Message"
-          onChange={(e)=> setMessage(e.target.value)}
+          <input
+            type="email"
+            name="from_email"
+            required
+           
+            placeholder="Email"
           />
 
-          <button >Submit</button>
-          
+          <textarea
+            name="message"
+            cols="30"
+            rows="10"
+            placeholder="Message"
+           
+          />
+
+          <button type="submit">Submit</button>
         </motion.form>
       </motion.div>
     </motion.div>
