@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef,useState } from "react";
 import "./Contact.scss";
 import { motion } from "framer-motion";
 import { BiMailSend, BiPhoneCall } from "react-icons/bi";
@@ -24,6 +24,10 @@ const variants = {
 const Contact = () => {
   const ref = useRef();
   const Form = useRef();
+  const [message, setMessage] = useState("")
+  const [text,setText] = useState("")
+  const [email,setEmail] = useState("")
+
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -33,6 +37,10 @@ const Contact = () => {
     }).then(
       () => {
         console.log("SUCCESS!");
+        alert("Sent")
+        setMessage("");
+        setText("");
+        setEmail("")
       },
       (error) => {
         console.log("FAILED...", error.text);
@@ -104,14 +112,16 @@ const Contact = () => {
             required
             placeholder="Name"
             name="from_name"
-           
+            onChange={(event)=>setText(event.target.value)}
+            value={text}
           />
 
           <input
             type="email"
             name="from_email"
             required
-           
+            onChange={(event)=>setEmail(event.target.value)}
+            value={email}
             placeholder="Email"
           />
 
@@ -120,7 +130,8 @@ const Contact = () => {
             cols="30"
             rows="10"
             placeholder="Message"
-           
+           onChange={(event)=>setMessage(event.target.value)}
+           value={message}
           />
 
           <button type="submit">Submit</button>
