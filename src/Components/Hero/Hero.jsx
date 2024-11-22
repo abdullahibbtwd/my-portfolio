@@ -61,7 +61,7 @@ const Hero = () => {
             Frontend Developer and Desktop Application Developer
           </motion.h1>
           <motion.div className="buttons" variants={textVariants}>
-            <a href="mycv.pdf" download="mycv.pdf">
+            <a href="AbdullahiBBCv.pdf" download="AbdullahiBBCv.pdf">
                 <motion.button   className="cv" variants={textVariants}>
               Download CV <FiDownload/>
             </motion.button>

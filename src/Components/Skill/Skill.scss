@@ -20,7 +20,7 @@
       font-size: 40px;
       font-weight: 500;
       color: var(--primary-color);
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       display: inline-block;
     }
     h1::before {
@@ -149,9 +149,11 @@
 @media (max-width: 479px) {
   .container {
     flex-direction: column;
+    
     .main-title {
       h1{
         font-size: 25px;
+        margin-bottom: 20px;
       }
       p {
         font-size: 13px;

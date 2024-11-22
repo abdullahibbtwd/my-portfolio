@@ -24,16 +24,7 @@ const Skill = () => {
     <div className="container">
       <div className="main-title">
         <h1>My Skills</h1>
-        <p>
-          Highly skilled React developer with expertise in building responsive,
-          scalable, and maintainable web applications. Proficient in JavaScript,
-          HTML/CSS, and modern frontend frameworks.
-        </p>
-        <p>
-          Experienced Java developer specializing in designing and developing
-          desktop applications. Skilled in Java-based technologies and
-          frameworks.
-        </p>
+       
       </div>
 
       <div className="row">
@@ -131,7 +122,49 @@ const Skill = () => {
               </div>
             </div>
             <div className="skill">
-              <div className="subject">Git</div>
+              <div className="subject">Git & Github</div>
+              <div className="progress-bar" value="90%">
+                <div className="progress-line" style={{ maxWidth: "90%" }}>
+                  <motion.div
+                    variants={textVariants}
+                    initial="initial"
+                    ref={ref}
+                    animate={isInView && "animate"}
+                    className="c"
+                  ></motion.div>
+                </div>
+              </div>
+            </div>
+            <div className="skill">
+              <div className="subject">Framer Motion</div>
+              <div className="progress-bar" value="80%">
+                <div className="progress-line" style={{ maxWidth: "80%" }}>
+                  <motion.div
+                    variants={textVariants}
+                    initial="initial"
+                    ref={ref}
+                    animate={isInView && "animate"}
+                    className="c"
+                  ></motion.div>
+                </div>
+              </div>
+            </div>
+            <div className="skill">
+              <div className="subject">Material UI</div>
+              <div className="progress-bar" value="70%">
+                <div className="progress-line" style={{ maxWidth: "70%" }}>
+                  <motion.div
+                    variants={textVariants}
+                    initial="initial"
+                    ref={ref}
+                    animate={isInView && "animate"}
+                    className="c"
+                  ></motion.div>
+                </div>
+              </div>
+            </div>
+            <div className="skill">
+              <div className="subject">TypeScript</div>
               <div className="progress-bar" value="60%">
                 <div className="progress-line" style={{ maxWidth: "60%" }}>
                   <motion.div
