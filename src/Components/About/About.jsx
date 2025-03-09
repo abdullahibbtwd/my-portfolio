@@ -53,11 +53,11 @@ const About = () => {
             <motion.h2>About Me</motion.h2>
             <motion.div className="line"></motion.div>
             <h3>
-              Expert Frontend Developer & Desktop Application Specialist With 3+
+              Intermidiate Frontend Developer & Desktop Application Specialist With 2
               Years Of Exprience
             </h3>
             <span>
-              Highly motivated and detail-oriented developer with 2+ years of
+              Highly motivated and detail-oriented developer with 2 years of
               experience in building scalable and interactive web applications
               using HTML, CSS, JavaScript, and React. Additionally, proficient
               in developing desktop applications using Java GUI. Passionate
