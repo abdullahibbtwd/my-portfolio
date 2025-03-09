@@ -77,7 +77,23 @@
             font-size: 15px;
             letter-spacing: 0.4px;
         }
-        button{
+        .button-container{
+            display: flex;
+            gap:5px;
+            .button1{
+                background: black;
+                color: white;
+                border-radius: 8px;
+                border: none;
+                width: 140px;
+                padding: 8px;
+                -webkit-border-radius: 8px;
+                -moz-border-radius: 8px;
+                -ms-border-radius: 8px;
+                -o-border-radius: 8px;
+                cursor: pointer;
+            }
+        .button{
             background: #FFCC66;
             border-radius: 8px;
             border: none;
@@ -89,6 +105,7 @@
             -o-border-radius: 8px;
             cursor: pointer;
          
+}
 }
     }
     

@@ -45,6 +45,7 @@ const items = [
     description:
       "Todo App is a task manager built with React and CSS. Users can select their preferred language, add and delete tasks, and mark them as Todo, doing and Done. The app utilizes local storage to persist data between sessions. With a responsive design, Todo App is accessible on desktop and mobile devices.",
     link: "https://abdullahibbtwd.github.io/elvistodo/",
+    link1:"https://github.com/abdullahibbtwd/elvistodo.git"
   },
   {
     id: 2,
@@ -53,6 +54,7 @@ const items = [
     description:
       "Welcome to elvis Weather App, your ultimate weather companion. Built with React and CSS, our website provides accurate and reliable weather forecasts powered by OpenWeatherMap API. Stay informed with current weather conditions, hourly forecasts, and 5-day forecasts.Track the weather in your location. Simple, intuitive, and responsive design for mobile and desktop devices",
     link: "https://abdullahibbtwd.github.io/elvisweatherapp/",
+    link1:"https://github.com/abdullahibbtwd/elvisweatherapp.git"
   },
   {
     id: 3,
@@ -64,6 +66,7 @@ const items = [
     description3:
       "User signin/authentication for secure access,Product management (add, edit, delete) with local database storage,Sales processing and receipt printing,Local database storage for efficient data management.",
     link: "https://video-five-livid.vercel.app/",
+
   },
   {
     id: 4,
@@ -75,7 +78,8 @@ const items = [
       "Posting page for creating new blog posts,Main blog page for displaying all posts,Edit post page for modifying existing posts,Single post page for viewing individual posts,and Login and registration system for secure user authentication",
     description3:
       "This project showcases my ability to design and develop responsive, interactive web applications with React and SASS, leveraging React Router for seamless routing.",
-      link:"https://elvis-blog-sandy.vercel.app/"
+      link:"https://elvis-blog-sandy.vercel.app/",
+      link1:"https://github.com/abdullahibbtwd/elvis-blog.git"
     },
   {
     id: 5,
@@ -88,6 +92,19 @@ const items = [
     description3:
       "This project showcases my ability to design and develop responsive, interactive web applications with React, Framer Motion, and Tailwind CSS, leveraging React Router for seamless routing.",
     link: "https://jicohsa-school.vercel.app/",
+    link1:"https://github.com/abdullahibbtwd/jicohsa-school.git"
+  },
+  {
+    id: 5,
+    title: "Yacht Rental Landing Page - React, Tailwind CSS, and Framer Motion",
+    img: "/rent.png",
+    description:
+      "This project is a modern and visually engaging landing page for a luxury yacht rental service, meticulously developed using React, Tailwind CSS, and Framer Motion. Inspired by a sleek design concept, I aimed to translate the static mockup into a dynamic and interactive web experience",
+ 
+    description3:
+      "Replicating the Design: Accurately translating the provided design into a functional web page required careful attention to detail, especially in replicating the layout and styling with Tailwind CSS.",
+    link: "https://yacht-rent.vercel.app/",
+    link1:"https://github.com/abdullahibbtwd/yacht-rent.git"
   },
 ];
 const Single = ({ item }) => {
@@ -109,7 +126,7 @@ const Single = ({ item }) => {
             ref={ref}
             animate={isInView && "animate"}
             className="imagecontainer"
-            ref={ref}
+           
           >
             <img src={item.img} alt="" />
           </motion.div>
@@ -121,18 +138,26 @@ const Single = ({ item }) => {
             ref={ref}
             animate={isInView && "animate"}
             className="textcontainer"
-            ref={ref}
             style={{ y: y }}
           >
             <h2>{item.title}</h2>
             <p className="class">{item.description}</p>
             <p>{item.description2}</p>
             <p>{item.description3}</p>
-            <a href={item.link}>
-              <motion.button whileHover={{ background: "white" }}>
+            <div className="button-container">
+               <a href={item.link}>
+              <motion.button className="button" whileHover={{ background: "white" }}>
                 See Demo
               </motion.button>
+            
             </a>{" "}
+            <a href={item.link1}>
+            <motion.button className="button1" whileHover={{ background: "white" ,color:"black"}}>
+                Github
+              </motion.button>
+            </a>
+            </div>
+           
           </motion.div>
         </div>
       </div>
