@@ -95,7 +95,7 @@ const items = [
     link1:"https://github.com/abdullahibbtwd/jicohsa-school.git"
   },
   {
-    id: 5,
+    id: 6,
     title: "Yacht Rental Landing Page - React, Tailwind CSS, and Framer Motion",
     img: "/rent.png",
     description:
@@ -106,6 +106,25 @@ const items = [
     link: "https://yacht-rent.vercel.app/",
     link1:"https://github.com/abdullahibbtwd/yacht-rent.git"
   },
+  {
+    id: 7,
+    title: "AB FIT - React, Tailwind CSS, and GSAP",
+    img: "/gym.png",
+    description:"This project is a high-energy, visually impactful landing page for a fictional gym, designed to showcase my front-end development skills using React, Tailwind CSS, and GSAP. I aimed to create an immersive online experience that captures the energy and dynamism of a fitness environment.",
+    description3:"The result is a dynamic and visually compelling gym landing page that effectively communicates the brand's energy and encourages user engagement. This project demonstrates my ability to leverage React, Tailwind CSS, and GSAP to create a modern, interactive, and performant web experience that aligns with a specific brand identity.",
+     link: "https://gym-green-seven.vercel.app/",
+    link1:"https://github.com/abdullahibbtwd/gym.git"
+  },
+  {
+    id: 8,
+    title: "Elversh Blog, Next JS",
+    img: "/Elversh-Blog.png",
+    description:"This personal blog, built with Next.js and JavaScript, is a full-stack project deployed on Vercel. It serves as a modern platform for sharing my thoughts on Opportunites, prioritizing performance and SEO through server-side rendering and static generation. Key features include Markdown support, categorization, tagging, and a search function, all presented in a responsive design",
+    description3:"The tech stack includes Next.js for the React framework and its rendering capabilities, alongside JavaScript for logic and potential API routes. Styling was achieved with Tailwind CSS. Deployed on Vercel, this project demonstrates my ability to create and deploy a complete, performant full stack blog application.",
+     link: "https://elversh-blog.vercel.app/",
+    link1:"https://github.com/abdullahibbtwd/elversh-blog.git"
+  }
+
 ];
 const Single = ({ item }) => {
   const ref = useRef();
