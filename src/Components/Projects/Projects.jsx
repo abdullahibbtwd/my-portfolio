@@ -7,6 +7,8 @@ import {
   useTransform,
   useInView,
 } from "framer-motion";
+import PropTypes from 'prop-types'; // Import PropTypes
+
 
 const imgVariants = {
   initial: {
@@ -161,8 +163,8 @@ const Single = ({ item }) => {
           >
             <h2>{item.title}</h2>
             <p className="class">{item.description}</p>
-            <p>{item.description2}</p>
-            <p>{item.description3}</p>
+            <p className="d2">{item.description2}</p>
+            <p className="d3">{item.description3}</p>
             <div className="button-container">
                <a href={item.link}>
               <motion.button className="button" whileHover={{ background: "white" }}>
@@ -182,6 +184,17 @@ const Single = ({ item }) => {
       </div>
     </section>
   );
+};
+Single.propTypes = {
+  item: PropTypes.shape({
+    img: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    description2: PropTypes.string,
+    description3: PropTypes.string,
+    link: PropTypes.string,
+    link1: PropTypes.string,
+  }).isRequired,
 };
 
 const Projects = () => {
